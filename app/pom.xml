@@ -1,0 +1,47 @@
+<project>
+  <parent>
+      <groupId>com.exist.person</groupId>
+      <artifactId>person</artifactId>
+      <version>1.0</version>
+      <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.exist.person</groupId>
+  <artifactId>app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>app</name>
+ 
+
+  <dependencies>
+    <dependency>
+      <groupId>com.exist.person</groupId>
+      <artifactId>core</artifactId>
+      <version>1.0</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+
+    <dependency>
+            <groupId>com.exist.person</groupId>
+            <artifactId>dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  
+</project>
+

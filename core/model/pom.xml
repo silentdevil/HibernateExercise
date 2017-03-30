@@ -1,0 +1,19 @@
+<project>
+
+  <parent>
+      <groupId>com.exist.person</groupId>
+      <artifactId>core</artifactId>
+      <version>1.0</version>
+       <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.exist.person</groupId>
+  <artifactId>model</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>model</name>
+  
+</project>

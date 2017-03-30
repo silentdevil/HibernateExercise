@@ -1,0 +1,57 @@
+<hibernate-mapping>
+	<class name = "Person" table = "persons">
+		<meta attribute = "class-description">
+			This class contains the person detail.
+		</meta>
+
+		<id name = "id" type = "int" column = "PersonID" >
+			<generator class = "native" />
+		</id>
+
+		<list name="Role" cascade="all">
+			<key column="ID"/>
+			<list-index column="Role"/>
+			<one-to-many class="Role"/>
+		</list>
+
+		<property name = "lastName" column = "LastName" type = "string" />
+		<property name = "firstName" column = "FirstName" type = "string" />
+		<property name = "middleName" column = "MiddleName" type = "string" />
+		<property name = "suffix" column = "Suffix" type = "string" />
+		<property name = "title" column = "Title" type = "string" />
+		<property name = "birthday" column = "Birthday" type = "calendar_date" />
+		<property name = "gwa" column = "GWA" type = "float" />
+		<property name = "dateHired" column = "DateHired" type = "calendar_date" />
+		<property name = "currentlyEmployed" column = "CurrentlyEmployed" type = "boolean" />
+		<property name = "contact" column = "lastName" type = "string" />
+		<property name = "firstName" column = "firstName" type = "string" />
+		<property name = "salary" column = "salary" type = "int" />
+		<property name = "lastName" column = "lastName" type = "string" />
+		<property name = "firstName" column = "firstName" type = "string" />
+		<many-to-one name="personAddress" column="Address" unique="true" class="personAddress" not-null="true"/>
+	</class>
+
+	<class name="PersonAddress" table="Addresses">
+		<meta attribute="class-description">
+			This class contains the address detail.
+		</meta>
+
+		<id name="id" type="int" column="AddressID">
+			<generator class="native"/>
+		</id>
+
+		<property name="street" column="streetName" type="string"/>
+		<property name="brgy" column="Brgy" type="string"/>
+		<property name="city" column="City" type="string"/>
+		<property name="zipCode" column="Zipcode" type="string"/>
+	</class>
+	<class name="Role" table="ROLES">
+		<meta attribute="class-description">
+			This class contains the certificate records.
+		</meta>
+		<id name="id" type="int" column="ID">
+			<generator class="native"/>
+		</id>
+		<property name="role" column="Role" type="string"/>
+	</class>
+</hibernate-mapping

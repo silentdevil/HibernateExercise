@@ -1,0 +1,22 @@
+<project>
+
+  <parent>
+      <groupId>com.exist.person</groupId>
+      <artifactId>person</artifactId>
+      <version>1.0</version>
+       <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.exist.person</groupId>
+  <artifactId>utilities</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>utilities</name>
+
+  
+
+  
+</project>
